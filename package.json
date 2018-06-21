@@ -1,0 +1,19 @@
+{
+  "name": "wizards-chess",
+  "version": "1.0.0",
+  "description": "Wizards chess",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/smrubin/wizards-chess.git"
+  },
+  "author": "Sam Rubin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/smrubin/wizards-chess/issues"
+  },
+  "homepage": "https://github.com/smrubin/wizards-chess#readme"
+}
