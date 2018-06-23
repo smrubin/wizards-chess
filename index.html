@@ -9,15 +9,25 @@
     <meta name="author" content="Sam Rubin">
 
     <link rel="stylesheet" href="vendor/chessboardjs-0.3.0/css/chessboard-0.3.0.min.css">
-
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body>
 
-    <h1>Wizards Chess</h1>
+    <div class="game">
+        <h1>Wizards Chess</h1>
+        <h4>If you know the line, you need not solve.</h4>
 
-    <div id="board1" style="width: 400px"></div>
+        <h4 class="error">&nbsp;</h4>
 
+        <div id="wizard-board" class="chessboard"></div>
+    </div>
+
+    <div class="success">
+        <!--Success video with audio and next clue-->
+    </div>
+
+    <script src="vendor/jquery/jquery-2-1-0.min.js"></script>
     <script src="vendor/chessboardjs-0.3.0/js/chessboard-0.3.0.min.js"></script>
     <script src="js/index.js"></script>
 </body>
