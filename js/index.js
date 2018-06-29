@@ -26,7 +26,7 @@
     };
 
     var onDragStart = function() {
-        $('.error').html('This is Wizard\'s Chess');
+        $('.game-error').html('This is Wizard\'s Chess');
         return false;
     };
 
