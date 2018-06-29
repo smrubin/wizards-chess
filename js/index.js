@@ -36,7 +36,6 @@
         onDragStart: onDragStart
     });
 
-
     /**
      * 2) Add listeners for Web Speech API
      */
@@ -62,7 +61,7 @@
 
         console.log(speechResult);
 
-        if(speechResult === phrase) {
+        if(speechResult.toLowerCase() === phrase.toLowerCase()) {
             handleSuccess();
         } else {
             handleError();
@@ -71,11 +70,12 @@
         console.log('Confidence' + event.results[0][0].confidence);
     };
 
-    recognition.onspeechend = function() {
+    recognition.onend = function() {
         recognition.start();
     };
 
     recognition.onnomatch = function(event) {
+        handleError();
         console.error('Command not recognizaed');
     };
 
@@ -83,7 +83,16 @@
         console.error('Error occurred in recognition: ' + event.error);
     };
 
+    recognition.onspeechstart = function() {
+        $('.game-error').html('&nbsp;');
+    };
+
     function handleSuccess() {
+
+        console.log('Success!');
+
+        recognition.onend = function(){}; // Reset
+        recognition.abort();
 
         var knight = $('.square-g5 > img');
 
@@ -97,18 +106,13 @@
                 $('.success-message').fadeIn();
             },false);
 
-            document.getElementById('success-video').play()
+            video.play()
         });
 
     }
 
     function handleError() {
         $('.game-error').html('Not the right move. Try again.');
-        recognition.start();
     }
-
-
-    //todo:
-    // keep persistent audio
 
 })();
