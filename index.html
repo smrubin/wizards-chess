@@ -16,15 +16,16 @@
 
     <div class="game">
         <h1>Wizards Chess</h1>
-        <h4>If you know the line, you need not solve.</h4>
+        <h3>If you know the line, you need not solve.</h3>
 
-        <h4 class="error">&nbsp;</h4>
+        <h4 class="game-error">&nbsp;</h4>
 
-        <div id="wizard-board" class="chessboard"></div>
+        <div id="wizard-board" class="game-board"></div>
     </div>
 
     <div class="success">
-        <!--Success video with audio and next clue-->
+        <video id="success-video" width="900" height="600" src="videos/success-video.mp4"></video>
+        <h2 class="success-message">Your next clue lies in the book from where this puzzle originated.</h2>
     </div>
 
     <script src="vendor/jquery/jquery-2-1-0.min.js"></script>

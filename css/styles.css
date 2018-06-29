@@ -3,15 +3,29 @@ html, body {
     box-sizing: border-box;
 }
 
-.game {
+.game, .success {
     text-align: center;
 }
 
-.chessboard {
+.game-board {
     width: 700px;
     margin: 0 auto;
 }
 
-.error {
+.game-error {
     color: red;
+}
+
+.success {
+    margin: 80px;
+    display: none;
+}
+
+.success-message {
+    display: none;
+}
+
+.square-g5 > img {
+    position: relative;
+    z-index: 1;
 }
