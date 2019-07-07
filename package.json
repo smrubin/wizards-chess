@@ -1,19 +1,30 @@
 {
   "name": "wizards-chess",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "Wizards chess",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "webpack --mode development",
+    "build": "webpack --mode production",
+    "watch": "webpack --watch --progress --colors --mode development"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/smrubin/wizards-chess.git"
   },
   "author": "Sam Rubin",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/smrubin/wizards-chess/issues"
   },
-  "homepage": "https://github.com/smrubin/wizards-chess#readme"
+  "homepage": "https://github.com/smrubin/wizards-chess#readme",
+  "dependencies": {
+    "@chrisoakman/chessboardjs": "^1.0.0",
+    "chess.js": "^0.10.2",
+    "jquery": "^3.4.1"
+  },
+  "devDependencies": {
+    "webpack": "^4.35.0",
+    "webpack-cli": "^3.3.5"
+  }
 }
