@@ -21,7 +21,7 @@
   "dependencies": {
     "@chrisoakman/chessboardjs": "^1.0.0",
     "chess.js": "^0.10.2",
-    "jquery": "^3.4.1"
+    "jquery": "^3.5.0"
   },
   "devDependencies": {
     "webpack": "^4.35.0",
